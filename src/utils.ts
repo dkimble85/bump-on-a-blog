@@ -18,10 +18,13 @@ export function pascalToKebabCase(pascalString: string): string {
 }
 
 export function kebabToPascalCase(kebabString: string): string {
-  return kebabString
-    .split("-")
-    .map((s) => s[0].toLocaleUpperCase() + s.substring(1))
-    .join("");
+  return (
+    kebabString
+      .split("-")
+      // @ts-expect-error map of string may be undefined
+      .map((s) => s[0].toLocaleUpperCase() + s.substring(1))
+      .join("")
+  );
 }
 
 export const BLOG_PATH = path.join(process.cwd(), "/posts/");

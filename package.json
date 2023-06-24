@@ -1,5 +1,5 @@
 {
-  "name": "journal-next-app",
+  "name": "bump-on-a-blog",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -11,9 +11,7 @@
     "prepare": "husky install"
   },
   "lint-staged": {
-
     "**/*.{js,ts,jsx,tsx}": "prettier --write --ignore-unknown"
-
   },
   "dependencies": {
     "@t3-oss/env-nextjs": "^0.2.1",
@@ -38,7 +36,6 @@
     "eslint": "^8.39.0",
     "eslint-config-next": "^13.2.4",
     "eslint-plugin-mdx": "^2.1.0",
-    "husky": "^8.0.0",
     "lint-staged": "^13.2.2",
     "postcss": "^8.4.21",
     "prettier": "^2.8.8",
