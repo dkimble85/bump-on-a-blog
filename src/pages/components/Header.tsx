@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export const Header = ({ className }: { className: string }) => {
+const Header = ({ className }: { className: string }) => {
   return (
     <header className={className}>
       <div className="ml-2 p-3">
@@ -10,3 +10,5 @@ export const Header = ({ className }: { className: string }) => {
     </header>
   );
 };
+
+export default Header;
