@@ -11,12 +11,13 @@ type HomeProps = {
 };
 
 function PostListItem({ slug, data }: HomeProps["posts"][number]) {
-  const { title, description } = data;
+  const { title, description, publishedAt } = data;
   return (
     <Link href={`/posts/${slug}`}>
-      <div className="card rounded-md border border-black p-5">
+      <div className="card m-3 rounded-md border border-black p-6">
         <div className="text-2xl font-bold">{title}</div>
         <div>{description}</div>
+        <div className="pt-4 text-xs">{publishedAt}</div>
       </div>
     </Link>
   );
@@ -30,23 +31,25 @@ export default function Home({ posts }: HomeProps) {
     );
   });
   return (
-    <div className="min-h-screen w-full">
+    <>
       <Head>
         <title>Bump on a Blog</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="mb-2 mt-2 p-6">
+      <div className="mb-4 ml-8 mr-8 mt-2 p-8 text-xl">
         Welcome to the Bump on a Blog. The goal of this blog was to push me to
         learn new tech while dabbling a little in journaling. I suspect topics
         will range from sports, video games, personal experiences, and maybe
         even some cooking recipes.
       </div>
-      <div className="ml-8 mr-8 grid grid-cols-2 gap-4">
-        {posts.map((post) => (
-          <PostListItem key={post.data.title} {...post} />
-        ))}
+      <div className="flex w-full justify-center">
+        <div className="ml-8 mr-8 grid grid-cols-1 gap-4">
+          {posts.map((post) => (
+            <PostListItem key={post.data.title} {...post} />
+          ))}
+        </div>
       </div>
-    </div>
+    </>
   );
 }
 
