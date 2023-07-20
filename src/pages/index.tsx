@@ -30,12 +30,18 @@ export default function Home({ posts }: HomeProps) {
     );
   });
   return (
-    <div className="flex min-h-screen w-full items-center justify-center">
+    <div className="min-h-screen w-full">
       <Head>
         <title>Bump on a Blog</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="grid grid-cols-2 gap-4">
+      <div className="mb-2 mt-2 p-6">
+        Welcome to the Bump on a Blog. The goal of this blog was to push me to
+        learn new tech while dabbling a little in journaling. I suspect topics
+        will range from sports, video games, personal experiences, and maybe
+        even some cooking recipes.
+      </div>
+      <div className="ml-8 mr-8 grid grid-cols-2 gap-4">
         {posts.map((post) => (
           <PostListItem key={post.data.title} {...post} />
         ))}

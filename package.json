@@ -6,7 +6,6 @@
     "build": "next build",
     "dev": "next dev",
     "lint": "next lint",
-    "sanity": "cd studio && sanity start",
     "start": "next start"
   },
   "lint-staged": {
@@ -20,8 +19,7 @@
     "next-mdx-remote": "^4.4.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "styled-components": "^5.3.10",
-    "zod": "^3.21.4"
+    "styled-components": "^5.3.10"
   },
   "devDependencies": {
     "@types/eslint": "^8.21.3",

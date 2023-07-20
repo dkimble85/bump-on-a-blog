@@ -16,19 +16,19 @@ export default function BlogPost({ source, frontMatter }: BlogPostProps) {
   console.log(frontMatter);
   return (
     <div className="p-4">
-      <div className="m-4 flex items-center justify-center">
-        <div className="prose prose-invert h-full w-full rounded border border-stone-700 p-10 shadow">
+      <div className="m-4">
+        <div className="prose prose-invert h-full w-full p-5 ">
           <h1 className="text-2xl font-bold">{frontMatter.title}</h1>
           <h2 className="text-xl">{frontMatter.description}</h2>
           <div className="mt-3">
             <MDXRemote {...source} />
           </div>
         </div>
-      </div>
-      <div className="ml-4">
-        <button className="rounded-md bg-orange-400 pb-1 pl-3 pr-3 pt-1">
-          <Link href="/">Back</Link>
-        </button>
+        <div className="ml-4">
+          <button className="rounded-md bg-orange-400 pb-1 pl-3 pr-3 pt-1">
+            <Link href="/">Back</Link>
+          </button>
+        </div>
       </div>
     </div>
   );
