@@ -12,6 +12,7 @@
     "**/*.{js,ts,jsx,tsx}": "prettier --write --ignore-unknown"
   },
   "dependencies": {
+    "@next/mdx": "^13.4.10",
     "@t3-oss/env-nextjs": "^0.2.1",
     "glob": "^10.2.7",
     "gray-matter": "^4.0.3",
@@ -19,6 +20,7 @@
     "next-mdx-remote": "^4.4.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "remark-gfm": "^3.0.1",
     "styled-components": "^5.3.10"
   },
   "devDependencies": {

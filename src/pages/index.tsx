@@ -11,12 +11,13 @@ type HomeProps = {
 };
 
 function PostListItem({ slug, data }: HomeProps["posts"][number]) {
-  const { title, description } = data;
+  const { title, description, publishedAt } = data;
   return (
     <Link href={`/posts/${slug}`}>
       <div className="card m-3 rounded-md border border-black p-5">
         <div className="text-2xl font-bold">{title}</div>
         <div>{description}</div>
+        <div className="pt-4 text-xs">{publishedAt}</div>
       </div>
     </Link>
   );
@@ -30,7 +31,7 @@ export default function Home({ posts }: HomeProps) {
     );
   });
   return (
-    <div className="min-h-screen w-full">
+    <>
       <Head>
         <title>Bump on a Blog</title>
         <link rel="icon" href="/favicon.ico" />
@@ -46,7 +47,7 @@ export default function Home({ posts }: HomeProps) {
           <PostListItem key={post.data.title} {...post} />
         ))}
       </div>
-    </div>
+    </>
   );
 }
 
