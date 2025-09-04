@@ -1,3 +1,11 @@
 @tailwind base;
+@layer base {
+  h2 {
+    @apply text-2xl font-semibold mt-3 mb-3; /* Example base styles for all h2s */
+  }
+  p {
+    @apply mt-2 mb-2
+  }
+}
 @tailwind components;
 @tailwind utilities;
